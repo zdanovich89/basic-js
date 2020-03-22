@@ -4,10 +4,15 @@ module.exports = function countCats(matrix) {
     matrix.forEach(item => {
         return newArr = newArr.concat(item);
     })
-    newArr.forEach(item => {
-        if(item =="^^") {
-            return count++;
-        }        
-    })   
-    return count;  
+    for(let i = 0; i < newArr.length; i++) {
+        if(newArr[i] == "^^") {            
+            count++;
+        }             
+    }
+    // newArr.forEach(item => {
+    //     if(item =="^^") {
+    //         return count++;
+    //     }        
+    // })   
+    return count;
 };
